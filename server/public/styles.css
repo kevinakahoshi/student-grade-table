@@ -1,0 +1,98 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.top-header {
+  border: 1px solid #ccc;
+  background: #fff;
+  height: 50px;
+}
+
+.atf {
+  background-position: center;
+  background-size: cover;
+}
+
+.btf {
+  padding: 50px 0px;
+}
+
+
+thead th {
+  padding: 10px 15px;
+}
+
+tr,
+td {
+  position: relative;
+  font-weight: 300;
+  min-height: 63px;
+}
+
+.table thead th,
+.table td,
+.table th {
+  vertical-align: middle;
+}
+
+.hidden {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.gradeTable {
+  padding: 50px 15px;
+}
+
+.gradeTable p {
+  margin: auto;
+}
+
+@media (min-width: 979px) {
+  .outer-form-box {
+    position: sticky;
+    z-index: 1020;
+    top: 30px;
+  }
+
+  .inner-form-box {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    height: fit-content;
+  }
+
+  .sticky-top {
+    top: 30px;
+  }
+
+  thead,
+  tbody {
+    border: 1px solid #ccc;
+  }
+}
+
+@media (max-width: 978px) {
+  .btf {
+    padding: 50px 0px;
+  }
+
+  .table-responsive {
+    border: 1px solid #ccc;
+  }
+
+  .table {
+    margin-bottom: 0px;
+  }
+}
