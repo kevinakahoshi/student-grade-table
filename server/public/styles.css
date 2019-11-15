@@ -13,13 +13,3 @@ body::-webkit-scrollbar {
 .gradeTable p {
   font-weight: 300;
 }
-
-@media (max-width: 978px) {
-  .table-responsive {
-    border: 1px solid #ccc;
-  }
-
-  .table {
-    margin-bottom: 0px;
-  }
-}
