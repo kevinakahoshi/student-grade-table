@@ -10,10 +10,6 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-.prepend-width {
-  width: 46px;
-}
-
 .gradeTable p {
   font-weight: 300;
 }
