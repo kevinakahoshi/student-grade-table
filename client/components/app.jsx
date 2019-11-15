@@ -52,13 +52,6 @@ class App extends React.Component {
       .then(response => { return response.json(); })
       .then(data => { this.setState({ grades: data }); })
       .catch(error => { console.error('There was an error:', error.message); });
-
-    // const request = `/api/grades/8`;
-    // const initObj = {
-    //   'method': 'DELETE'
-    // };
-
-    // fetch(request, initObj);
   }
 
   render() {
