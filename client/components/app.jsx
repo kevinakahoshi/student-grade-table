@@ -22,8 +22,24 @@ class App extends React.Component {
     return Math.round(averageGrade);
   }
 
-  submitGrade() {
-    return null;
+  submitGrade(newGrade) {
+    const request = '/api/grades';
+    const initObj = {
+      'method': 'POST',
+      'body': JSON.stringify(newGrade),
+      'headers': {
+        'Content-Type': 'application/json'
+      }
+    };
+
+    fetch(request, initObj)
+      .then(response => { return response.json(); })
+      .then(newGrade => {
+        this.setState(
+          { grades: this.state.grades.concat(newGrade) }
+        );
+      })
+      .catch(error => { console.error('This was an error:', error.message); });
   }
 
   componentDidMount() {
@@ -36,6 +52,13 @@ class App extends React.Component {
       .then(response => { return response.json(); })
       .then(data => { this.setState({ grades: data }); })
       .catch(error => { console.error('There was an error:', error.message); });
+
+    // const request = `/api/grades/8`;
+    // const initObj = {
+    //   'method': 'DELETE'
+    // };
+
+    // fetch(request, initObj);
   }
 
   render() {

@@ -17,6 +17,18 @@
       "course": "Web Development",
       "grade": 50,
       "id": 3
+    },
+    {
+      "name": "Kevin",
+      "course": "Programming",
+      "grade": 10,
+      "id": 4
+    },
+    {
+      "name": "Sam",
+      "course": "Ordering Shrimp",
+      "grade": 87,
+      "id": 5
     }
   ]
 }

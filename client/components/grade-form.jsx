@@ -1,37 +1,76 @@
 import React from 'react';
+import InputField from './input';
 
 class GradeForm extends React.Component {
   constructor(props) {
     super(props);
     this.submitGrade = this.props.submit;
     this.state = {
-      fields: ''
+      name: '',
+      course: '',
+      grade: null
     };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+  handleChange(event) {
+    this.setState({ [event.target.name]: event.target.value });
+  }
+
+  handleSubmit() {
+    const newGrade = this.state;
+    newGrade.grade = parseInt(newGrade.grade);
+    this.submitGrade(newGrade);
+  }
+
   render() {
     return (
       <div className="col-sm-4">
-        <form onSubmit={this.submitGrade}>
+        <form onSubmit={this.handleSubmit}>
           <div className="input-group mb-2">
             <div className="input-group-prepend">
-              <i className="fas fa-user input-group-text"></i>
+              <div className="input-group-text">
+                <i className="fas fa-user fa-fw"></i>
+              </div>
             </div>
-            <input type="text" className="form-control" placeholder="Name"/>
+            <InputField
+              name="name"
+              type="text"
+              placeholder="Name"
+              className="form-control"
+              onChange={this.handleChange} />
           </div>
           <div className="input-group mb-2">
             <div className="input-group-prepend">
-              <i className="far fa-list-alt input-group-text"></i>
+              <div className="input-group-text">
+                <i className="far fa-list-alt fa-fw"></i>
+              </div>
             </div>
-            <input type="text" className="form-control" placeholder="Name" />
+            <InputField
+              name="course"
+              type="text"
+              placeholder="Course"
+              className="form-control"
+              onChange={this.handleChange} />
           </div>
           <div className="input-group mb-2">
             <div className="input-group-prepend">
-              <i className="fas fa-user-graduate input-group-text"></i>
+              <div className="input-group-text">
+                <i className="fas fa-user-graduate fa-fw"></i>
+              </div>
             </div>
-            <input type="text" className="form-control" placeholder="Name" />
+            <InputField
+              name="grade"
+              type="number"
+              placeholder="Grade"
+              className="form-control"
+              onChange={this.handleChange}/>
           </div>
-          <button type="submit" className="btn btn-primary mr-2">Add</button>
-          <button type="submit" className="btn btn-secondary">Cancel</button>
+          <div className="d-flex justify-content-end">
+            <button type="submit" className="btn btn-primary mr-2">Add Student</button>
+            <button type="reset" className="btn btn-secondary mr-0">Cancel</button>
+          </div>
         </form>
       </div>
     );

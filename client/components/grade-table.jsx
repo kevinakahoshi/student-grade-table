@@ -11,9 +11,15 @@ function GradeTable(props) {
       <table className="table table-bordered table-striped student-list border">
         <thead>
           <tr>
-            <th scope="col" className="nameCol"><h3 className="mb-0">Name</h3></th>
-            <th scope="col" className="courseCol"><h3 className="mb-0">Course</h3></th>
-            <th scope="col" className="gradeCol"><h3 className="mb-0">Grade</h3></th>
+            <th scope="col" className="nameCol">
+              <h5 className="mb-0">Name</h5>
+            </th>
+            <th scope="col" className="courseCol">
+              <h5 className="mb-0">Course</h5>
+            </th>
+            <th scope="col" className="gradeCol">
+              <h5 className="mb-0">Grade</h5>
+            </th>
           </tr>
         </thead>
         <tbody id="displayArea">
