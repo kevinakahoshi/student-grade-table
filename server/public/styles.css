@@ -10,37 +10,8 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-thead th {
-  padding: 10px 15px;
-}
-
-tr,
-td {
-  position: relative;
-  font-weight: 300;
-  min-height: 63px;
-}
-
-.table thead th,
-.table td,
-.table th {
-  vertical-align: middle;
-}
-
-.hidden {
-  display: none;
-}
-
-.flex {
-  display: flex;
-}
-
-.gradeTable {
-  padding: 50px 15px;
-}
-
 .gradeTable p {
-  margin: auto;
+  font-weight: 300;
 }
 
 @media (max-width: 978px) {
