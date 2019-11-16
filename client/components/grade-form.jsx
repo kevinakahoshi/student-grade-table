@@ -27,7 +27,7 @@ class GradeForm extends React.Component {
   render() {
     return (
       <div className="col-sm-4">
-        <form onSubmit={this.handleSubmit}>
+        <form className="sticky-top" onSubmit={this.handleSubmit}>
           <div className="input-group mb-2">
             <div className="input-group-prepend">
               <div className="input-group-text">
