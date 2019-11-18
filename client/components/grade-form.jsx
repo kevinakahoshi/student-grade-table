@@ -21,7 +21,12 @@ class GradeForm extends React.Component {
   handleSubmit() {
     const newGrade = this.state;
     newGrade.grade = parseInt(newGrade.grade);
-    this.submitGrade(newGrade);
+    if (newGrade.name && newGrade.course && newGrade.grade) {
+      this.submitGrade(newGrade);
+    } else {
+      alert('You forgot something');
+      event.preventDefault();
+    }
   }
 
   render() {

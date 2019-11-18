@@ -10,6 +10,7 @@ class App extends React.Component {
       grades: []
     };
     this.getAverageGrade = this.getAverageGrade.bind(this);
+    this.editGrade = this.editGrade.bind(this);
     this.deleteGrade = this.deleteGrade.bind(this);
     this.submitGrade = this.submitGrade.bind(this);
   }
@@ -56,6 +57,29 @@ class App extends React.Component {
     this.setState({ grades: newState });
   }
 
+  editGrade(editedGrade) {
+    const request = `/api/grades/${editedGrade.id}`;
+    const initObj = {
+      'method': 'PUT',
+      'body': JSON.stringify(editedGrade),
+      'headers': {
+        'Content-Type': 'application/json'
+      }
+    };
+    fetch(request, initObj)
+      .then(response => { return response.json(); })
+      .then(result => {
+        const newState = this.state.grades.map(original => {
+          if (original.id === result.id) {
+            return result;
+          }
+          return original;
+        });
+        this.setState({ grades: newState });
+      })
+      .catch(error => { console.error('There was an error:', error.message); });
+  }
+
   componentDidMount() {
     const request = '/api/grades';
     const initObj = {
@@ -73,7 +97,7 @@ class App extends React.Component {
       <div className="container gradeTable py-5">
         <Header averageGrade={averageGrade}/>
         <div className="row">
-          <GradeTable grades={this.state.grades} delete={this.deleteGrade}/>
+          <GradeTable grades={this.state.grades} edit={this.editGrade} delete={this.deleteGrade} />
           <GradeForm submit={this.submitGrade} />
         </div>
       </div>

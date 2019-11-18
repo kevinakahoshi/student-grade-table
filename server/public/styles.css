@@ -12,4 +12,9 @@ body::-webkit-scrollbar {
 
 .gradeTable p {
   font-weight: 300;
+  padding: .375rem .75rem;
+}
+
+.inputPlaceholder {
+  font-weight: 300;
 }
