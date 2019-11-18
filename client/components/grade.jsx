@@ -6,17 +6,13 @@ class Grade extends React.Component {
     super(props);
     this.state = {
       changeGrade: false,
-      name: '',
-      course: '',
-      grade: null,
+      name: props.grade.name,
+      course: props.grade.course,
+      grade: props.grade.grade,
       id: props.grade.id
     };
     this.editCallback = props.edit;
     this.deleteCallback = props.delete;
-    this.grade = props.grade.grade;
-    this.id = props.grade.id;
-    this.name = props.grade.name;
-    this.course = props.grade.course;
     this.changeGrade = this.changeGrade.bind(this);
     this.getIcon = this.getIcon.bind(this);
     this.getChangedValues = this.getChangedValues.bind(this);
@@ -29,17 +25,24 @@ class Grade extends React.Component {
     return 'fas fa-edit info';
   }
 
-  getChangedValues(event) {
-    this.setState({ [event.target.name]: event.target.value });
+  getChangedValues(value) {
+    this.setState({ [event.target.name]: value });
+    if (isNaN(this.state.grade)) {
+      this.setState({ grade: 0 });
+    }
   }
 
   changeGrade() {
-    const updatedGrade = this.state;
-    updatedGrade.grade = parseInt(updatedGrade.grade);
-    if (updatedGrade.changeGrade) {
+    const updatedGrade = {
+      name: this.state.name,
+      course: this.state.course,
+      grade: parseInt(this.state.grade),
+      id: this.state.id
+    };
+    if (updatedGrade.name && updatedGrade.name.length > 2 && updatedGrade.course && updatedGrade.grade > -1 && updatedGrade.grade < 101) {
+      this.setState({ changeGrade: !this.state.changeGrade });
       this.editCallback(updatedGrade);
     }
-    this.setState({ changeGrade: !this.state.changeGrade });
   }
 
   render() {
@@ -47,18 +50,18 @@ class Grade extends React.Component {
     return (
       <tr>
         <td scope="col" className="nameCol">
-          <GradeInputElement name="name" value={this.name} state={this.state} changeCallback={this.getChangedValues} />
+          <GradeInputElement name="name" value={this.state.name} state={this.state} changeCallback={this.getChangedValues} />
         </td>
         <td scope="col" className="courseCol">
-          <GradeInputElement name="course" value={this.course} state={this.state} changeCallback={this.getChangedValues}/>
+          <GradeInputElement name="course" value={this.state.course} state={this.state} changeCallback={this.getChangedValues}/>
         </td>
         <td scope="col" className="gradeCol">
-          <GradeInputElement name="grade" value={this.grade} state={this.state} changeCallback={this.getChangedValues} />
+          <GradeInputElement name="grade" value={parseInt(this.state.grade)} state={this.state} changeCallback={this.getChangedValues} />
         </td>
-        <td scope="col" className="gradeCol justify-content-end">
-          <div className="btn-group">
-            <button className="btn btn-secondary" onClick={this.changeGrade}><i className={editIcon}></i></button>
-            <button className="btn btn-danger" onClick={() => this.deleteCallback(this.id)}><i className="fas fa-user-minus"></i></button>
+        <td scope="col" className="operationsCol">
+          <div className="btn-group d-flex">
+            <button className="btn btn-outline-info w-50" onClick={this.changeGrade}><i className={editIcon}></i></button>
+            <button className="btn btn-outline-danger w-50" onClick={() => this.deleteCallback(this.state.id)}><i className="fas fa-user-minus"></i></button>
           </div>
         </td>
       </tr>

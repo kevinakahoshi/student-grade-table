@@ -94,9 +94,9 @@ class App extends React.Component {
   render() {
     const averageGrade = this.getAverageGrade();
     return (
-      <div className="container gradeTable py-5">
+      <div className="container py-5">
         <Header averageGrade={averageGrade}/>
-        <div className="row">
+        <div className="mainContainer row d-flex">
           <GradeTable grades={this.state.grades} edit={this.editGrade} delete={this.deleteGrade} />
           <GradeForm submit={this.submitGrade} />
         </div>

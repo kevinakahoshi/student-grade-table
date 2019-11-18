@@ -21,18 +21,17 @@ class GradeForm extends React.Component {
   handleSubmit() {
     const newGrade = this.state;
     newGrade.grade = parseInt(newGrade.grade);
-    if (newGrade.name && newGrade.course && newGrade.grade) {
+    if (newGrade.name && newGrade.course && newGrade.grade > -1 && newGrade.grade < 101) {
       this.submitGrade(newGrade);
     } else {
-      alert('You forgot something');
       event.preventDefault();
     }
   }
 
   render() {
     return (
-      <div className="col-sm-4">
-        <form className="sticky-top" onSubmit={this.handleSubmit}>
+      <div className="col-md-4">
+        <form className="sticky-top gradeForm border rounded-lg w-100" onSubmit={this.handleSubmit}>
           <div className="input-group mb-2">
             <div className="input-group-prepend">
               <div className="input-group-text">
@@ -73,8 +72,8 @@ class GradeForm extends React.Component {
               onChange={this.handleChange}/>
           </div>
           <div className="d-flex justify-content-end">
-            <button type="submit" className="btn btn-primary mr-2">Add Student</button>
-            <button type="reset" className="btn btn-secondary mr-0">Cancel</button>
+            <button type="submit" className="btn btn-outline-primary mr-2">Add Student</button>
+            <button type="reset" className="btn btn-outline-secondary mr-0">Cancel</button>
           </div>
         </form>
       </div>

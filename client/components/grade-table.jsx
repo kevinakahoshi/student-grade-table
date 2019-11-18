@@ -9,8 +9,8 @@ function GradeTable(props) {
     return <h3>No grades recorded</h3>;
   }
   return (
-    <div className="col-sm-8">
-      <table className="table table-bordered table-striped student-list border">
+    <div className="col-md-8">
+      <table className="table table-responsive table-striped student-list border gradeTable">
         <thead>
           <tr>
             <th scope="col" className="nameCol">
