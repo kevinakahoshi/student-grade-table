@@ -23,7 +23,7 @@ function GradeInputElement(props) {
 
   if (inputType === 'number' && isNaN(textValue)) {
     inputClass = 'mb-0 form-control inputPlaceholder is-invalid';
-  } else if (textValue > 100) {
+  } else if (textValue > 100 || textValue < 0) {
     inputClass = 'mb-0 form-control inputPlaceholder is-invalid';
   }
 
