@@ -96,7 +96,7 @@ class App extends React.Component {
     return (
       <div className="container py-5">
         <Header averageGrade={averageGrade}/>
-        <div className="mainContainer row d-flex">
+        <div className="mainContainer row d-flex flex-wrap-reverse">
           <GradeTable grades={this.state.grades} edit={this.editGrade} delete={this.deleteGrade} />
           <GradeForm submit={this.submitGrade} />
         </div>

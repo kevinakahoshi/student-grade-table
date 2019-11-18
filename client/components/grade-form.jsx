@@ -71,9 +71,9 @@ class GradeForm extends React.Component {
               className="form-control"
               onChange={this.handleChange}/>
           </div>
-          <div className="d-flex justify-content-end">
-            <button type="submit" className="btn btn-outline-primary mr-2">Add Student</button>
-            <button type="reset" className="btn btn-outline-secondary mr-0">Cancel</button>
+          <div className="d-flex justify-content-end btn-group">
+            <button type="submit" className="btn btn-outline-primary w-50">Add</button>
+            <button type="reset" className="btn btn-outline-secondary w-50">Cancel</button>
           </div>
         </form>
       </div>
