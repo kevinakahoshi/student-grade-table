@@ -4,12 +4,55 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
+  background-image: url('./images/email-pattern.png');
+  background-repeat: repeat;
+  background-attachment: fixed;
 }
 
 body::-webkit-scrollbar {
   display: none;
 }
 
+.gradeTable {
+  background: #fff;
+}
+
+.gradeForm {
+  background: #fff;
+  padding: .75em;
+  top: 30px;
+  margin-bottom: 15px;
+}
+
+.nameCol {
+  width: 35%;
+}
+
+.courseCol {
+  width: 35%;
+}
+
+.gradeCol {
+  width: 15%;
+}
+
+.operationsCol {
+  width: 15%;
+}
+
 .gradeTable p {
   font-weight: 300;
+  padding: .375rem .75rem;
+}
+
+.inputPlaceholder {
+  font-weight: 300;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }

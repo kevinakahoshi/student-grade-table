@@ -3,13 +3,14 @@ import Grade from './grade';
 
 function GradeTable(props) {
   const grades = props.grades;
+  const editCallback = props.edit;
   const deleteCallback = props.delete;
   if (grades.length === 0) {
     return <h3>No grades recorded</h3>;
   }
   return (
-    <div className="col-sm-8">
-      <table className="table table-bordered table-striped student-list border">
+    <div className="col-md-8">
+      <table className="table table-responsive table-striped student-list border gradeTable">
         <thead>
           <tr>
             <th scope="col" className="nameCol">
@@ -29,7 +30,7 @@ function GradeTable(props) {
         <tbody id="displayArea">
           {
             grades.map(grade =>
-              <Grade grade={grade} key={grade.id} delete={deleteCallback}/>
+              <Grade grade={grade} key={grade.id} edit={editCallback} delete={deleteCallback} />
             )
           }
         </tbody>

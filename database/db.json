@@ -1,34 +1,124 @@
 {
   "grades": [
     {
-      "name": "Dan Paschal",
-      "course": "Web Development",
-      "grade": 100,
-      "id": 1
+      "name": "Christian Haney",
+      "course": "React Basics",
+      "grade": 95,
+      "id": 8
     },
     {
-      "name": "Scott Bowler",
-      "course": "Web Development",
+      "name": "Roger Enand",
+      "course": "Core JS",
+      "grade": 90,
+      "id": 9
+    },
+    {
+      "name": "Samantha Nagle",
+      "course": "Ordering Beef Belly",
       "grade": 100,
-      "id": 2
+      "id": 10
+    },
+    {
+      "name": "Kevin Akahoshi",
+      "course": "Eating Cheeseburgers",
+      "grade": 95,
+      "id": 11
+    },
+    {
+      "name": "Vicky Hyunhcao",
+      "course": "Watching Anime",
+      "grade": 95,
+      "id": 12
+    },
+    {
+      "name": "Jeff Lee",
+      "course": "Smoking Cigarettes",
+      "grade": 90,
+      "id": 13
+    },
+    {
+      "name": "Vandana Khaparde",
+      "course": "Cooking Vegetarian Food",
+      "grade": 100,
+      "id": 14
+    },
+    {
+      "name": "Wenhao Wang",
+      "course": "Computer Science",
+      "grade": 90,
+      "id": 15
+    },
+    {
+      "name": "Kiana Fukuda",
+      "course": "Recycling",
+      "grade": 100,
+      "id": 16
+    },
+    {
+      "name": "Julie Chung",
+      "course": "Saving Animals",
+      "grade": 100,
+      "id": 17
+    },
+    {
+      "name": "Kris Ringler",
+      "course": "Drinking Beer",
+      "grade": 100,
+      "id": 18
+    },
+    {
+      "name": "Tomas Cormons",
+      "course": "Running",
+      "grade": 94,
+      "id": 19
+    },
+    {
+      "name": "Ernest Hubbard",
+      "course": "Choosing Tomato",
+      "grade": 99,
+      "id": 20
+    },
+    {
+      "name": "Christian Parizeau",
+      "course": "Raid",
+      "grade": 97,
+      "id": 21
+    },
+    {
+      "name": "Ziyaad Motala",
+      "course": "Being Chill",
+      "grade": 93,
+      "id": 22
+    },
+    {
+      "name": "Michael Chang",
+      "course": "Eating Healthy",
+      "grade": 96,
+      "id": 23
+    },
+    {
+      "name": "Jacob Hassler",
+      "course": "California Culture",
+      "grade": 90,
+      "id": 24
+    },
+    {
+      "name": "Khoa Cao",
+      "course": "Napping on Lunch",
+      "grade": 90,
+      "id": 25
+    },
+    {
+      "name": "Rapha Bolet",
+      "course": "Driving Long Distances",
+      "grade": 93,
+      "id": 26
     },
     {
       "name": "Tim Davis",
-      "course": "Web Development",
-      "grade": 50,
-      "id": 3
-    },
-    {
-      "name": "Kevin",
-      "course": "Programming",
-      "grade": 10,
-      "id": 4
-    },
-    {
-      "name": "Sam",
-      "course": "Ordering Shrimp",
-      "grade": 87,
-      "id": 5
+      "course": "Teaching",
+      "grade": 100,
+      "id": 27
     }
   ]
 }
