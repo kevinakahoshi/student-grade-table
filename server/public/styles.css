@@ -13,39 +13,35 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-.gradeTable {
-  background: #fff;
-}
-
-.gradeForm {
+.grade-form {
   background: #fff;
   padding: .75em;
   top: 30px;
   margin-bottom: 15px;
 }
 
-.nameCol {
+.name-col {
   width: 35%;
 }
 
-.courseCol {
+.course-col {
   width: 35%;
 }
 
-.gradeCol {
+.grade-col {
   width: 15%;
 }
 
-.operationsCol {
+.operations-col {
   width: 15%;
 }
 
-.gradeTable p {
+.grade-table p {
   font-weight: 300;
   padding: .375rem .75rem;
 }
 
-.inputPlaceholder {
+.input-placeholder {
   font-weight: 300;
 }
 

@@ -31,7 +31,7 @@ class GradeForm extends React.Component {
   render() {
     return (
       <div className="col-md-4">
-        <form className="sticky-top gradeForm border rounded-lg w-100" onSubmit={this.handleSubmit}>
+        <form className="sticky-top grade-form border rounded-lg w-100" onSubmit={this.handleSubmit}>
           <div className="input-group mb-2">
             <div className="input-group-prepend">
               <div className="input-group-text">

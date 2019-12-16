@@ -16,15 +16,15 @@ function GradeInputElement(props) {
   }
 
   if (textValue.length < 3) {
-    inputClass = 'mb-0 form-control inputPlaceholder is-invalid';
+    inputClass = 'mb-0 form-control input-placeholder is-invalid';
   } else {
-    inputClass = 'mb-0 form-control inputPlaceholder';
+    inputClass = 'mb-0 form-control input-placeholder';
   }
 
   if (inputType === 'number' && isNaN(textValue)) {
-    inputClass = 'mb-0 form-control inputPlaceholder is-invalid';
+    inputClass = 'mb-0 form-control input-placeholder is-invalid';
   } else if (textValue > 100 || textValue < 0) {
-    inputClass = 'mb-0 form-control inputPlaceholder is-invalid';
+    inputClass = 'mb-0 form-control input-placeholder is-invalid';
   }
 
   if (currentState) {
