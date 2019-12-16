@@ -28,9 +28,16 @@ function GradeInputElement(props) {
   }
 
   if (currentState) {
-    return <input name={props.name} className={inputClass} placeholder={placeholderText} onChange={event => {
-      changeCallback(event.target.value);
-    }} type={inputType} value={props.value} pattern={regexPattern} />;
+    return <input name={props.name}
+      className={inputClass}
+      placeholder={placeholderText}
+      onChange={event => {
+        changeCallback(event.target.value);
+      }}
+      type={inputType}
+      value={props.value}
+      pattern={regexPattern}
+      autoComplete={'off'} />;
   }
   return <p className="mb-0">{textValue}</p>;
 }

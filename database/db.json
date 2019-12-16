@@ -1,3 +1,16 @@
 {
-  "grades": []
+  "grades": [
+    {
+      "name": "Kevin Akahoshi",
+      "course": "Programming",
+      "grade": 90,
+      "id": 1
+    },
+    {
+      "name": "Joe Smith",
+      "course": "React",
+      "grade": 100,
+      "id": 2
+    }
+  ]
 }
