@@ -46,15 +46,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Learning-Fuze/sgt-react.git"
+    "url": "git+https://github.com/kevinakahoshi/student-grade-table.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Learning-Fuze/sgt-react/issues"
+    "url": "https://github.com/kevinakahoshi/student-grade-table/issues"
   },
-  "homepage": "https://github.com/Learning-Fuze/sgt-react#readme",
+  "homepage": "https://github.com/kevinakahoshi/student-grade-table#readme",
   "eslintIgnore": [
     "server/public/main.js"
   ],
