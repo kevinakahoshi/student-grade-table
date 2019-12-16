@@ -15,7 +15,8 @@ function InputField(props) {
       type={inputAttributes.type}
       className={inputAttributes.className}
       placeholder={inputAttributes.placeholder}
-      onChange={inputAttributes.onChange} />
+      onChange={inputAttributes.onChange}
+      autoComplete={'off'}/>
   );
 }
 
